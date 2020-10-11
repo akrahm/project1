@@ -1,0 +1,11 @@
+
+div.container{
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+body{
+    background-image: url("image/image2.jpg");
+    background-size: cover;
+    background-color: saddlebrown;
+}

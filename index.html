@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career builder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" href="#">CAREER BUILDER</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="index.html">Find Jobs<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">Create Your Profile</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Recommendations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="https://getbootstrap.com/">Resources</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div>
+        <div class="container">
+            <h3>Jobs and Vacancies</h3>
+            <div class="search my-2">
+                <form class="form-inline my-2">
+                    <input class="form-control mr-sm-2" type="search" placeholder="eg.Programmer" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <div>
+                    <div class="Location my-2">
+                        <form class="form-inline my-2 ">
+                            <input class="form-control mr-sm-2" type="search" placeholder="eg.Mumbai"
+                                aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Location</button>
+                        </form>
+                    </div>
+                    <button id="findJobs">
+                        <h4>Find Jobs</h4>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown show">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Find Jobs
+        </a>
+
+        <!--Creating drop down menu for filtering jobs-->
+
+        <div id="filterJobs" class="dropdown-menu" onclick="myJobs()">
+            <a class="dropdown-item" href="#">
+
+                <!--For Date Posted-->
+
+                <h5>Date Posted</h5>
+                <form onclick="myTime()">
+                    <input type="checkbox" id="datePost" name="datePosted" value="24 hrs">
+                    <label for="datePosted"> 24 hours</label><br>
+                    <input type="checkbox" id="datePost" name="datePosted" value="3 days">
+                    <label for="datePosted"> 3 days</label><br>
+                    <input type="checkbox" id="datePost" name="datePosted" value="7 days">
+                    <label for="datePosted"> 7 days</label><br>
+                    <input type="checkbox" id="datePost" name="datePosted" value="30 days">
+                    <label for="datePosted"> 30 days</label><br>
+                </form>
+            </a>
+            <div class="dropdown-divider"></div>
+
+            <!--For JobType-->
+
+            <a class="dropdown-item" href="#">
+                <h5>Job Type</h5>
+                <form onclick="MyJobType()">
+                    <input type="checkbox" id="JobType" name="job Type" value="all">
+                    <label for="Job Type"> All</label><br>
+                    <input type="checkbox" id="JobType" name="job Type" value="Full Time ">
+                    <label for="Job Type"> Full Time Employment Job</label><br>
+                    <input type="checkbox" id="JobType" name="job Type" value="Part-Time">
+                    <label for="Job Type"> Part-Time Employment Job</label><br>
+                </form>
+            </a>
+            <!--For Caegory-->
+
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+                <h5>Categories</h5>
+                <form onclick="myCategory()">
+                    <input type="checkbox" id="ctgry" name="Categories" value="IT">
+                    <label for="Categories"> Information Technology</label><br>
+                    <input type="checkbox" id="ctgry" name="Categories" value="ME">
+                    <label for="Categories"> Mechanical Enginneering</label><br>
+                    <input type="checkbox" id="ctgry" name="Categories" value="EE">
+                    <label for="Categories"> Electronics Engineering</label><br>
+                    <input type="checkbox" id="ctgry" name="Categories" value="CSE">
+                    <label for="Categories"> computer science</label><br>
+                </form>
+            </a>
+        </div>
+        <Button id="Submit" onclick="myFunction1()">submit</Button>
+    </div>
+     <!--script files taken from bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!--add javascript file to html-->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

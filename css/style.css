@@ -1,0 +1,35 @@
+body{
+  background-image: url("https://images.pexels.com/photos/4065876/pexels-photo-4065876.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+div.container{
+    text-align: center;
+    background-color:royalblue;
+    padding-right: 0%;
+    
+}
+
+div.dropdown{
+  text-align: left;
+  margin: auto;
+  padding-top: 1rem;
+  padding-left: 7rem;
+}
+
+body, html {
+  height: 100%;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("image/image2.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
